@@ -1,7 +1,8 @@
 app website: https://hiddenshadows.github.io/test-project/
 
 run command to deploy build to Github pages
-### 'npm run deploy'  
+
+### `npm run deploy`  
 
 # Getting Started with Create React App
 
