@@ -10,6 +10,11 @@ function Section2() {
 
   let imgSrc;
 
+  let chartStyle = {
+    width: '10',
+    position: 'right'
+
+  }
   
 
   let calcBmi  = (event) =>{
@@ -51,33 +56,36 @@ function Section2() {
 
     return (
       <section id="BMI-section">
+        <div className = 'chart'>
+            <img src={require('../assets/bmi-chart.gif')} alt ='' ></img>
+        </div>
         <div className="app12">
-      <div className = 'container12'>
-        <h2 className = 'center12'BMI Calculator></h2>
-        <h1 className = 'title12'> BMI Calculator</h1>
-          <form onSubmit={calcBmi}>
-            <div>
-              <label>Weight (lbs)</label>
-              <input value = {weight} onChange={(event) => setWeight(event.target.value)} />
-            </div>
-            <div>
-              <label>Height (in)</label>
-              <input value = {height} onChange={(event) => setHeight(event.target.value)} />
-            </div>
-            <div>
-              <button className= 'btn12' type= 'submit12'>Submit</button>
-              <button className= 'btn12 btn-outline12' onClick={reload} type= 'submit12'>Restart</button>
-            </div>
-          </form>
-          <div className='center12'>
-              <h3> Your BMI is:{bmi}</h3>
-              <p>{message}</p>
+          <div className = 'container12'>
+            <h2 className = 'center12'BMI Calculator></h2>
+            <h1 className = 'title12'> BMI Calculator</h1>
+              <form onSubmit={calcBmi}>
+                <div>
+                  <label>Weight (lbs)</label>
+                  <input value = {weight} onChange={(event) => setWeight(event.target.value)} />
+                </div>
+                <div>
+                  <label>Height (in)</label>
+                  <input value = {height} onChange={(event) => setHeight(event.target.value)} />
+                </div>
+                <div>
+                  <button className= 'btn12' type= 'submit12'>Submit</button>
+                  <button className= 'btn12 btn-outline12' onClick={reload} type= 'submit12'>Restart</button>
+                </div>
+              </form>
+              <div className='center12'>
+                  <h3> Your BMI is:{bmi}</h3>
+                  <p>{message}</p>
+              </div>
+              <div className = 'img-container12'>
+                <img src={imgSrc} alt =''></img>
+              </div>
           </div>
-          <div className = 'img-container12'>
-            <img src={imgSrc} alt =''></img>
-          </div>
-      </div>
-    </div>
+        </div>
       </section>
       
     );
