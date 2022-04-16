@@ -1,45 +1,85 @@
-import React from 'react';
+import React, {useState} from 'react';
+import './section1index.css'
+
 
 function Section1() {
+
+    const [weight, setWeight] = useState(0)
+  const [height, setHeight] = useState(0)
+  const [bmi, setBmi] = useState('')
+  const [message, setMessage] = useState('')
+
+  let imgSrc;
+
+  
+
+  let calcBmi  = (event) =>{
+    //prevetn submitting
+    event.preventDefault()
+
+    if(weight === 0 || height === 0){
+      alert('Please enter valid values')
+    }else{
+      const bmi = (weight / (height*height) *703)
+      setBmi(bmi.toFixed(1))
+
+      if(bmi<25){
+        setMessage('You are underweight')
+      }else if (bmi >= 25 && bmi < 30){
+        setMessage('You are a healthy weight')
+      }else{
+        setMessage('You are overweight')
+      }
+    }
+  }
+
+  if(bmi<1){
+    imgSrc = null
+  }else{
+    if(bmi<25){
+      imgSrc = require('../assets/skinny.jpg')
+    }else if(bmi >= 25 && bmi < 30){
+      imgSrc = require('../assets/normal.jpg')
+    }else{
+      imgSrc = require('../assets/fat.jpg')
+    }
+  } 
+
+
+  let reload = () =>{
+    window.location.reload()
+  }
+
+
+
     return (
-        <div>
-            <section className="ftco-section ftco-services ftco-no-pt ftco-no-pb">
-                <div className="container">
-                    <div className="row no-gutters services-section">
-                    <div className="col-md-4 d-flex align-self-stretch ftco-animate">
-                        <div className="media block-6 services text-center d-block">
-                        <div className="icon"><span className="flaticon-body"></span></div>
-                        <div className="media-body">
-                            <h3 className="heading mb-3">Free Lesson</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                            {/* <!-- <p><a href="#" className="btn btn-primary">Read more</a></p> --> */}
-                        </div>
-                        </div>      
-                    </div>
-                    <div className="col-md-4 d-flex align-self-stretch ftco-animate">
-                        <div className="media block-6 services services-2 text-center d-block">
-                        <div className="icon"><span className="flaticon-diet"></span></div>
-                        <div className="media-body">
-                            <h3 className="heading mb-3">35% Discount</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                            {/* <!-- <p><a href="#" className="btn btn-primary">Read more</a></p> --> */}
-                        </div>
-                        </div>    
-                    </div>
-                    <div className="col-md-4 d-flex align-self-stretch ftco-animate">
-                        <div className="media block-6 services text-center d-block">
-                        <div className="icon"><span className="flaticon-running"></span></div>
-                        <div className="media-body">
-                            <h3 className="heading mb-3">Free Testing</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                            {/* <!-- <p><a href="#" className="btn btn-primary">Read more</a></p> --> */}
-                        </div>
-                        </div>      
-                    </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <div className="app12">
+      <div className = 'container12'>
+        <h2 className = 'center12'BMI Calculator></h2>
+        <h1 className = 'title12'> BMI Calculator!</h1>
+          <form onSubmit={calcBmi}>
+            <div>
+              <label>Weight (lbs)</label>
+              <input value = {weight} onChange={(event) => setWeight(event.target.value)} />
+            </div>
+            <div>
+              <label>Height (in)</label>
+              <input value = {height} onChange={(event) => setHeight(event.target.value)} />
+            </div>
+            <div>
+              <button className= 'btn12' type= 'submit12'>Submit</button>
+              <button className= 'btn12 btn-outline12' onClick={reload} type= 'submit12'>Restart</button>
+            </div>
+          </form>
+          <div className='center12'>
+              <h3> Your BMI is:{bmi}</h3>
+              <p>{message}</p>
+          </div>
+          <div className = 'img-container12'>
+            <img src={imgSrc} alt =''></img>
+          </div>
+      </div>
+    </div>
     );
 };
 
