@@ -33,11 +33,11 @@ function Footer() {
           </div> */}
           <div className="col-md">
             <div className="ftco-footer-widget mb-4">
-            	<h2 className="ftco-heading-2">Have a Questions?</h2>
+            	<h2 className="ftco-heading-2">Contact</h2>
             	<div className="block-23 mb-3">
 	              <ul>
 	                <li><span className="icon icon-map-marker"></span><span className="text">UCSC</span></li>
-	                <li><a href="./index.html"><span className="icon icon-phone"></span><span className="text">+0</span></a></li>
+	                {/* <li><a href="./index.html"><span className="icon icon-phone"></span><span className="text">+0</span></a></li> */}
 	                <li><a href="./index.html"><span className="icon icon-envelope"></span><span className="text">info@yourdomain.com</span></a></li>
 	              </ul>
 	            </div>
@@ -47,9 +47,9 @@ function Footer() {
         <div className="row">
           <div className="col-md-12 text-center">
 
-            {/* <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
-  {/* Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i className="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> */}
-  {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p> */}
+            {/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i className="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+            {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
           </div>
         </div>
       </div>
