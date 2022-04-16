@@ -14,13 +14,13 @@ export default class Nav extends Component {
                         <div className="collapse navbar-collapse" id="ftco-nav">
                             <ul className="navbar-nav nav ml-auto">
                                 <li className="nav-item"><a href="#home-section" className="nav-link"><span>Home</span></a></li>
-                                <li className="nav-item"><a href="#programs-section" className="nav-link"><span>BMI Calculator</span></a></li>
-                                <li className="nav-item"><a href="#services-section" className="nav-link"><span>Services</span></a></li>
-                                <li className="nav-item"><a href="#schedule-section" className="nav-link"><span>Schedule</span></a></li>
+                                <li className="nav-item"><a href="#BMI-section" className="nav-link"><span>BMI Calculator</span></a></li>
+                                <li className="nav-item"><a href="#services-section" className="nav-link"><span>Filler section</span></a></li>
+                                {/* <li className="nav-item"><a href="#schedule-section" className="nav-link"><span>Schedule</span></a></li>
                                 <li className="nav-item"><a href="#about-section" className="nav-link"><span>About</span></a></li>
                                 <li className="nav-item"><a href="#coaches-section" className="nav-link"><span>Coaches</span></a></li>
                                 <li className="nav-item"><a href="#blog-section" className="nav-link"><span>Blog</span></a></li>
-                                <li className="nav-item"><a href="#contact-section" className="nav-link"><span>Contact</span></a></li>
+                                <li className="nav-item"><a href="#contact-section" className="nav-link"><span>Contact</span></a></li> */}
                             </ul>
                         </div>
                     </div>
