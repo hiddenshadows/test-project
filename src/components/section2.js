@@ -53,7 +53,7 @@ function Section2() {
       <div className="app12">
       <div className = 'container12'>
         <h2 className = 'center12'BMI Calculator></h2>
-        <h1 className = 'title12'> BMI Calculator!</h1>
+        <h1 className = 'title12'> BMI Calculator</h1>
           <form onSubmit={calcBmi}>
             <div>
               <label>Weight (lbs)</label>

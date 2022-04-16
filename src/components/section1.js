@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import './section1index.css'
 
 
 function Section1() {
