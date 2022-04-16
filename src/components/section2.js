@@ -50,7 +50,8 @@ function Section2() {
   }
 
     return (
-      <div className="app12">
+      <section id="BMI-section">
+        <div className="app12">
       <div className = 'container12'>
         <h2 className = 'center12'BMI Calculator></h2>
         <h1 className = 'title12'> BMI Calculator!</h1>
@@ -77,6 +78,8 @@ function Section2() {
           </div>
       </div>
     </div>
+      </section>
+      
     );
 };
 
