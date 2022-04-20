@@ -3,7 +3,7 @@ import React from 'react';
 import Nav from "./components/nav"
 import Home from "./components/home-section"
 import Section1 from "./components/section1"
-import Section2 from "./components/section2"
+import BMI_Section from "./components/BMI_Section"
 import Section3 from "./components/section3"
 import Section4 from "./components/section4"
 import Section5 from "./components/section5"
@@ -24,7 +24,7 @@ function App() {
       <Nav />
       <Home />
       <Section1 />
-      <Section2 />
+      <BMI_Section />
       <Section3 />
       {/* <Section4 />
       <Section5 />
