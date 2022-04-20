@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
   }
   
   .app12{
@@ -11,8 +12,10 @@
     width:500px;
     height:50%;
     font:bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: auto;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    color:black;
     /* moved container12 stuff here */
     box-shadow: 0px 0px 10px rgb(158, 29, 36);
     border-radius: 100px;
@@ -23,7 +26,7 @@
   input{
     width: 100%;
     font-size: 1.2rem;
-    font-family: fantasy;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 8px 4px;
     margin: 8px;
     
@@ -31,15 +34,16 @@
   
   .btn12{
     display: block;
-    width: 100%;
+    width: 80%;
     font-size: 1.2rem;
-    font-family: fantasy;
-    margin: 15px 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 15px 43px;
     padding: 8px 0px;
-    background-color: rgb(226, 170, 181);
+    background-color: rgb(255, 255, 255);
     color:rgb(0, 0, 0);
     border-radius: 8px;
     border-style:double;
+    
     
     transition: 300ms ease-in-out ;
     
@@ -47,8 +51,8 @@
   }
   
   .btn12:hover{
-    color:rgb(252, 0, 50);
-    background-color: aliceblue;
+    color:rgb(0, 0, 0);
+    background-color: rgb(119, 119, 119);
   }
   
   .btn12:active{
@@ -57,13 +61,14 @@
   
   
   .btn-outline12{
-    background-color: rgb(226, 170, 181);
+    background-color: rgb(252, 252, 252);
     color:rgb(0, 0, 0);
+    
   }
   
   p{
     margin:10px 0;
-    margin: 10px 85px;
+    margin: 10px 130px;
     font-style: italic;
   }
   
@@ -74,9 +79,10 @@
   
   .img-container12 img{
     height: 200px;
-    box-shadow: 0px 0px 10px rgb(158, 29, 36);
-    margin: 100px 80px;
+    box-shadow: 0px 0px 10px rgb(77, 77, 77);
+    margin: 100px 135px;
     transition: 300ms ease-in-out ;
+    
   }
   
   .img-container12 img:hover{
@@ -89,6 +95,7 @@
     text-decoration:double;
     margin-bottom: 20px;
     margin-left: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .BMI-section{
