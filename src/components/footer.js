@@ -1,9 +1,15 @@
 import React from 'react';
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+
+const url = "https://gmail.us14.list-manage.com/subscribe/post?u=c154850c74dba0e9f9862dae4&amp;id=622a4b7a14";
+
+const SimpleForm = () => <MailchimpSubscribe url={url}/>
+
 
 function Footer() {
     return (
         <div>
-                <footer className="ftco-footer ftco-section">
+          <footer className="ftco-footer ftco-section">
       <div className="container">
         <div className="row mb-5">
           <div className="col-md">
@@ -53,7 +59,9 @@ function Footer() {
           </div>
         </div>
       </div>
+      <SimpleForm/>
     </footer>
+    
         </div>
     );
 };
