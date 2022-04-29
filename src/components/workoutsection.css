@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  /* .workout-plan {
+    margin: 50px;
+     } */
+
+  .app11{
+    /* display:flex; */
+    /* justify-content: center; */
+    /* align-items:flex-start; */
+    min-width:100px;
+    height:50%;
+    font:bold;
+    font-size: 1.5rem;
+    margin: auto;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    color:black;
+  }
+
+  .btn11{
+    display:flex;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 50 px;
+    padding: 8px 0px;
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    border-radius: 8px;
+    border-style:double;
+    
+    
+    transition: 300ms ease-in-out ;
+    
+    
+  }
+  
+  .btn11:hover{
+    color:rgb(0, 0, 0);
+    background-color: rgb(119, 119, 119);
+  }
+  
+  .btn11:active{
+    cursor:progress;
+  }
+  
+  
+  .btn-outline11{
+    background-color: rgb(252, 252, 252);
+    color:rgb(0, 0, 0);
+    
+  }
+
+  .title11{
+    text-decoration:double;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  
+
+  
+
+  .msg{
+    opacity: 0;
+    transition: opacity 2s ease;
+  }

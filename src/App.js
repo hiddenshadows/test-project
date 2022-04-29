@@ -1,10 +1,11 @@
 import './App.css';
 import React from 'react';
+import { useState } from "react";
 import Nav from "./components/nav"
 import Home from "./components/home-section"
 import Section1 from "./components/section1"
 import BMI_Section from "./components/BMI_Section"
-import Section3 from "./components/section3"
+import Workout_section from "./components/workout_section"
 import Section4 from "./components/section4"
 import Section5 from "./components/section5"
 import Section6 from "./components/section6"
@@ -18,6 +19,13 @@ import Footer from "./components/footer"
 // import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
+  const [workouts, updateWorkouts] = useState([]);
+
+  // const addContact = (workout) => {
+  //   updateContacts([...contacts, workout]);
+  // };
+  // console.log(workouts)
+
   return (
     <div>
       {/* <h1>Hello World</h1> */}
@@ -25,12 +33,12 @@ function App() {
       <Home />
       <Section1 />
       <BMI_Section />
-      <Section3 />
-      {/* <Section4 />
-      <Section5 />
+      <Workout_section />
+      {/* <Section4 /> */}
+      {/* <Section5 />
       <Section6 />
       <Section7 />
-      <Section8 />*/}
+      <Section8 /> */}
       {/* <Section9 /> 
       <Section10 /> */}
       {/* <Section11 /> */}
