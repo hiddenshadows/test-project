@@ -4,8 +4,8 @@ import { useState } from "react";
 import Nav from "./components/nav"
 import Home from "./components/home-section"
 import Section1 from "./components/section1"
-import BMI_Section from "./components/BMI_Section"
-import Workout_section from "./components/workout_section"
+import BMIsection from "./components/BMI_Section"
+import WorkoutSection from "./components/workout_section"
 import Section4 from "./components/section4"
 import Section5 from "./components/section5"
 import Section6 from "./components/section6"
@@ -21,10 +21,10 @@ import Footer from "./components/footer"
 function App() {
   const [workouts, updateWorkouts] = useState([]);
 
-  // const addContact = (workout) => {
-  //   updateContacts([...contacts, workout]);
-  // };
-  // console.log(workouts)
+  const addWorkout = (workout) => {
+    updateWorkouts([...workouts, workout]);
+  };
+  console.log(workouts)
 
   return (
     <div>
@@ -32,9 +32,9 @@ function App() {
       <Nav />
       <Home />
       <Section1 />
-      <BMI_Section />
-      <Workout_section />
-      {/* <Section4 /> */}
+      <BMIsection />
+      <WorkoutSection addWorkout={addWorkout}/>
+      <Section4 workouts={workouts}/>
       {/* <Section5 />
       <Section6 />
       <Section7 />

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './BMI_Section.css'
 
-function BMI_Section() {
+function BMIsection() {
 
   const [weight, setWeight] = useState(0)
   const [height, setHeight] = useState(0)
@@ -82,4 +82,4 @@ function BMI_Section() {
     );
 };
 
-export default BMI_Section;
+export default BMIsection;

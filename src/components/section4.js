@@ -1,13 +1,18 @@
 import React from 'react';
-// import
+import { useState, Component } from "react";
 
-function Section4(exercise) {
-
+function Section4({workouts}) {
 	// console.log(exercise.workout_name);
 
     return (
     	<section className="created_workout" id="schedule-section">
-			<h1>{exercise.workout_name}</h1>
+			{workouts.map((workout) => (
+				<div className="card" key={workout.name}>
+					<p className="card-name">{workout.name}</p>
+					<p>{workout.reps}</p>
+					<p>{workout.sets}</p>
+				</div>
+				))}
     	</section>
     );
 };

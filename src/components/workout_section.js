@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Section4 from './section4';
 import './workoutsection.css';
 
-function Workout_section() {
+function WorkoutSection({addWorkout}) {
 
   const [workout, setWorkout] = useState({
     name: "",
@@ -10,8 +10,6 @@ function Workout_section() {
     sets: 0
   })
 
-  const [reps, setReps] = useState(0)
-  const [sets, setSets] = useState(0)
   const [msg, setMsg] = useState({m: ''})
 
   // let exercise = {
@@ -34,8 +32,12 @@ function Workout_section() {
 
   const handleSubmit  = (event) => {
     event.preventDefault()
+    
     console.log(workout)
+
+    addWorkout(workout)
     setWorkout({ name: "", reps: 0, sets: 0 });
+    setMsg.m = 'Workout Added!'
   };
 
   let reload = () =>{
@@ -49,15 +51,15 @@ function Workout_section() {
           <form onSubmit={handleSubmit}>
             <div>
               <label>Workout Name</label>
-              <input  name="workout name" value = {workout.name} />
+              <input  name="name" placeholder="Deadlift" value = {workout.name} onChange={handleChange}/>
             </div>
             <div>
               <label>Reps</label>
-              <input name="workout reps" value = {workout.reps} />
+              <input name="reps" placeholder="10" value = {workout.reps} onChange={handleChange}/>
             </div>
             <div>
               <label>Sets</label>
-              <input name="workout sets" value = {workout.sets} />
+              <input name="sets"placeholder="5" value = {workout.sets} onChange={handleChange}/>
             </div>
             <div>
                 <button className= 'btn11' type= 'submit11'>Add Workout</button>
@@ -75,4 +77,4 @@ function Workout_section() {
     );
 };
 
-export default Workout_section;
+export default WorkoutSection;
