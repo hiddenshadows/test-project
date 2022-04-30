@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test-project/static/css/main.6e3216c2.css",
-    "main.js": "/test-project/static/js/main.4a94da12.js",
+    "main.css": "/test-project/static/css/main.eeb9cb11.css",
+    "main.js": "/test-project/static/js/main.5a9a9c13.js",
     "static/js/787.a526e8cd.chunk.js": "/test-project/static/js/787.a526e8cd.chunk.js",
     "static/media/bmi-chart.png": "/test-project/static/media/bmi-chart.0bb4cc15436b5a581aab.png",
     "static/media/normal.jpg": "/test-project/static/media/normal.f69a94f1e8b5972d99f3.jpg",
@@ -9,12 +9,12 @@
     "static/media/fat.jpg": "/test-project/static/media/fat.51f9ded5e4c4a17f2851.jpg",
     "static/media/skinny.jpg": "/test-project/static/media/skinny.bd551ef2266d3659d8a8.jpg",
     "index.html": "/test-project/index.html",
-    "main.6e3216c2.css.map": "/test-project/static/css/main.6e3216c2.css.map",
-    "main.4a94da12.js.map": "/test-project/static/js/main.4a94da12.js.map",
+    "main.eeb9cb11.css.map": "/test-project/static/css/main.eeb9cb11.css.map",
+    "main.5a9a9c13.js.map": "/test-project/static/js/main.5a9a9c13.js.map",
     "787.a526e8cd.chunk.js.map": "/test-project/static/js/787.a526e8cd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e3216c2.css",
-    "static/js/main.4a94da12.js"
+    "static/css/main.eeb9cb11.css",
+    "static/js/main.5a9a9c13.js"
   ]
 }
