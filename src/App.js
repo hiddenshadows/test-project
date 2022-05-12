@@ -19,12 +19,47 @@ import Footer from "./components/footer"
 // import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
-  const [workouts, updateWorkouts] = useState([]);
 
-  const addWorkout = (workout) => {
-    updateWorkouts([...workouts, workout]);
-  };
-  console.log(workouts)
+  const [workouts, updateWorkouts] = useState({
+    workoutsMon: [],
+    workoutsTues: [],
+    workoutsWed: [],
+    workoutsThur: [],
+    workoutsFri: [],
+    workoutsSat: [],
+    workoutsSun: []
+  });
+  // }
+  // const [workoutsMon, updateWorkoutsMon] = useState([]);
+  // const [workoutsTues, updateWorkoutsTues] = useState([]);
+  // const [workoutsWed, updateWorkoutsWed] = useState([]);
+  // const [workoutsSat, updateWorkoutsSat] = useState([]);
+  // const [workoutsSun, updateWorkoutsSun] = useState([]);
+  //const [workoutsSun, updateWorkoutsSun] = useState([]);
+  // const [workoutsSun, updateWorkoutsSun] = useState([]);
+
+    
+
+    const addWorkout = (workout) => {
+      updateWorkouts({})
+    // if (workout.day  "Monday"){
+    //   updateWorkoutsMon([...workoutsMon, workout]);
+    // } else if (workout.day === "Tuesday"){
+    //   updateWorkoutsTues([...workoutsTues, workout]);
+    // } else if(workout.day === "Wednsday"){
+    //   updateWorkoutsWed([...workoutsWed, workout]);
+    // } else if (workout.day === "Thursday"){
+    //   updateWorkoutsThur([...workoutsThur, workout]);
+    // } else if (workout.day === "Friday"){
+    //   updateWorkoutsFri([...workoutsFri, workout]);
+    // } else if (workout.day === "Saturday"){
+    //   updateWorkoutsSat([...workoutsSat, workout]);
+    // }else if (workout.day === "Sunday"){
+    //   updateWorkoutsSun([...workoutsSun, workout]);
+    // } else {
+    //   console.log("select a valid day")
+    }
+
 
   return (
     <div>

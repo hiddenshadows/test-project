@@ -1,0 +1,37 @@
+.sunday{
+    display: flex;
+    
+}
+
+.monday{
+    display: flex;
+    padding-left: 100px;
+}
+
+.tuesday{
+    display: flex;
+    padding-left: 200px;
+}
+
+.nottoggled{
+    background-Color: "white";
+	font-Size: "20px";
+	padding: "10px 60px";
+	border-Radius: "5px";
+	margin: "10px 0px";
+	cursor: "pointer";
+	color: "grey";
+	opacity: "0.7";
+	cursor: "default";
+}
+
+.toggled{
+    background-Color: "black";
+  color: "white";
+  font-Size: "20px";
+  padding: "10px 60px";
+  border-Radius: "5px";
+  margin: "10px 0px";
+  cursor: "pointer";
+}
+

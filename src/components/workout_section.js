@@ -7,24 +7,11 @@ function WorkoutSection({addWorkout}) {
   const [workout, setWorkout] = useState({
     name: "",
     reps: 0,
-    sets: 0
+    sets: 0,
+    day:  ""
   })
 
   const [msg, setMsg] = useState({m: ''})
-
-  // let exercise = {
-  //   name : workout_name,
-  //   reps : reps,
-  //   sets: sets
-  // }
-
-  let completeWorkout = (event) => {
-    event.preventDefault()
-    setMsg.m = 'Workout Added!'
-    // setWorkout = (event1.target.value, event1.target.)
-    // console.log(workout)
-    // Section4(exercise) 
-  }
 
   const handleChange  = (event) => {
     setWorkout({ ...workout, [event.target.name]: event.target.value });
@@ -34,9 +21,11 @@ function WorkoutSection({addWorkout}) {
     event.preventDefault()
     
     console.log(workout)
-
+    // TODO
     addWorkout(workout)
-    setWorkout({ name: "", reps: 0, sets: 0 });
+
+
+    setWorkout({ name: "", reps: 0, sets: 0, day: ""});
     setMsg.m = 'Workout Added!'
   };
 
