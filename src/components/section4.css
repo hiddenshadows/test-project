@@ -1,16 +1,36 @@
-.sunday{
-    display: flex;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     
+  }
+
+
+.sunday{
+    margin-left: 10px;
+    margin-bottom: -100px;
 }
 
 .monday{
-    display: flex;
-    padding-left: 100px;
+    margin-left: 225px;
+    margin-bottom: -100px;
+    margin-bottom: -100px;
 }
 
 .tuesday{
-    display: flex;
-    padding-left: 200px;
+    margin-left: 450px;
+    margin-bottom: -100px;
+}
+
+.wednesday{
+    margin-left: 675px;
+
+}
+
+
+.alldays{
+    display:grid;
+    
 }
 
 .nottoggled{

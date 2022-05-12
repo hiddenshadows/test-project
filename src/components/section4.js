@@ -59,12 +59,7 @@ let buttonInactive = {
 // let buttonMon = buttonInactive
 // let buttonTue = buttonInactive 
 
-let buttonDict = {
-	buttonSun: buttonInactive,
-	buttonMon: buttonActive,
-	buttonTue: buttonInactive,
-	buttonWed: buttonInactive
-}
+
 const setToggle = styled(Button)`
   opacity: 0.6;
   ${({ active }) =>
@@ -74,15 +69,17 @@ const setToggle = styled(Button)`
   `}
 `;
 
-function setStyle(dayStyle){
-	console.log("hello")
-	for(var key in buttonDict){
-		key = buttonInactive
-	}
-	dayStyle = buttonActive
-	console.log("day", buttonDict)
-	return buttonDict;
-}
+// function setStyle(dayStyle){
+// console.log("hello")
+// 	for(var key in buttonDict){
+// 		key = buttonInactive
+// 	}
+// 	this.state.dayStyle = buttonActive
+// 	console.log("day", buttonDict)
+// 	return buttonDict;
+// }
+
+
 
 
 function setDay(workouts, day){
@@ -102,51 +99,51 @@ const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
 
 function Section4({workouts}) {
 	console.log("workouts", workouts);
-	const [active, setActive] = useState(buttonDict);
+	const [active, setActive] = useState({buttonSun: buttonActive, buttonMon: buttonInactive, buttonTue: buttonInactive, buttonWed: buttonInactive});
 
-	//const [stylez, setStylez] = useState("nottoggled")
 
     return (
     	<section className="created_workout" id="schedule-section">
-			
-			<div className='sunday' >	
-			 <button className='sun' style={active.buttonSun} onClick={() =>{
-				 setDay(workouts, days[0]);
-				 //setActive(days[0]);
-				
-				setActive(setStyle(active.buttonSun));
+			<div  className='alldays'>
+				<div className='sunday' >	
+					<button className='sun' style={active.buttonSun} onClick={() =>{
+						setDay(workouts, days[0]);
+					
+						
+						setActive({buttonSun: buttonActive, buttonMon: buttonInactive, buttonTue: buttonInactive, buttonWed: buttonInactive});
 
-				// if sunday = True then pass, else find which value is one, reset value, set 
-				 
-			 }}>Sunday
-			 </button>
-			</div>
+						// if sunday = True then pass, else find which value is one, reset value, set 
+						
+					}}>Sunday
+					</button>
+				</div>
 
-			<div className='monday' >
-			 <button className='monday' style={active.buttonMon} onClick={() =>{
-				 setDay(workouts, days[1]);
-				 //setActive(days[1]);
-				 setActive(setStyle(active.buttonMon));
-			 }}>Monday
-			 </button>
-			</div>
+				<div className='monday' >
+					<button className='monday'style={active.buttonMon}  onClick={() =>{
+						setDay(workouts, days[1]);
+						
+						setActive({buttonSun: buttonInactive, buttonMon: buttonActive, buttonTue: buttonInactive, buttonWed: buttonInactive});
+					}}>Monday
+					</button>
+				</div>
 
-			<div className='tuesday' >	
-			 <button style={active.buttonTue} onClick={() =>{
-				 setDay(workouts, days[2]);
-				 //setActive(days[2]);
-				 setActive(setStyle(active.buttonTue));
-			 }}>Tuesday
-			 </button>
-			</div>
+				<div className='tuesday' >	
+					<button style={active.buttonTue} onClick={() =>{
+						setDay(workouts, days[2]);
+						
+						setActive({buttonSun: buttonInactive, buttonMon: buttonInactive, buttonTue: buttonActive, buttonWed: buttonInactive});
+					}}>Tuesday
+					</button>
+				</div>
 
-			<div className='wednesday' >	
-			 <button style={active.buttonWed} onClick={() =>{
-				 setDay(workouts, days[3]);
-				 //setActive(days[3]);
-				 setActive(setStyle(active.buttonWed));
-			 }}>Wednesday
-			 </button>
+				<div className='wednesday' >	
+					<button style={active.buttonWed} onClick={() =>{
+						setDay(workouts, days[3]);
+						
+						setActive({buttonSun: buttonInactive, buttonMon: buttonInactive, buttonTue: buttonInactive, buttonWed: buttonActive});
+					}}>Wednesday
+					</button>
+				</div>
 			</div>
 
 
